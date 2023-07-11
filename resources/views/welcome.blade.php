@@ -9,7 +9,7 @@
         <meta name="csrf-token" content="{{ csrf_token()}}">
 
     </head>
-    <!--Estilos extras-->
+    <!--Estilos extras -->
     <style>
         *{
             margin: 0;
@@ -30,7 +30,7 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
                     <div>
-                        <!--Contenedor del chatbot -->
+                        <!--Contenedor del chatbot --> 
                         <div class="container-fluid m-0 d-flex">
     
                             <div class="pl-2" style="width: 40px; height: 50-px;font-size:180%">
@@ -67,8 +67,7 @@
                 </div>
             </div>
         </div>
-    </body>
-    
+    </body>    
 </html>
 
 <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
@@ -88,7 +87,7 @@
                                 </div>`);
 
         $.ajax({
-            type: 'post',
+            type: 'POST',
             url:'{{url('send')}}',
             data: {
                 'input': $value
@@ -107,4 +106,5 @@
         })
         
     })
-</script>
+</script>  
+

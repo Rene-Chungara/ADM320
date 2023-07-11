@@ -12,7 +12,8 @@ class ChatBotController extends Controller
         $result = OpenAI::completions()->create([
             'max_tokens' => 100,
             'model' => 'text-davinci-003',
-            'prompt'=>$input
+            'prompt'=>$input,
+            "temperature" => 0.4,
         ]);
 
         $response = array_reduce(
