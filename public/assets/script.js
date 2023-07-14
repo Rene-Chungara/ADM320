@@ -17,3 +17,4 @@ function calculatePayment() {
         resultElement.innerHTML = 'El monto a pagar mensualmente es: ' + MontoAPagar.toFixed(2) + ' BS';
     }
 }
+

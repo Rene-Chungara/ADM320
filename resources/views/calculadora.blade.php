@@ -1,10 +1,5 @@
 <html>
-    <head><!--
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
-            integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" 
-            crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <head>
             <title>Analisis Crediticio</title>
             <link rel="icon" type="image/png" href="{{asset('images/logo.png')}}">
             <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -14,21 +9,6 @@
         <meta name="csrf-token" content="{{ csrf_token()}}">
 
     </head>
-    <!--Estilos extras
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        ::-webkit-scrollbar{
-            width: 5px;
-        }
-        ::-webkit-scrollbar-track{
-            background: #13254c;
-        }
-        ::-webkit-scrollbar-thumb{
-            background: #061128;
-        }-->
     </style>
     <body>
         <header class="header">
@@ -58,7 +38,7 @@
         <div class="section-wrapper">
             <div class="calculator">
 
-                <h1>Calculadora de Préstamo</h1>
+                <h1>Calculadora</h1>
                 <div class="input-group">
                     <label for="loanAmount">Monto del préstamo:</label>
                     <input type="number" id="loanAmount" required>
@@ -82,7 +62,7 @@
             </div>
 
             <div class="chat-container">
-                <h1>Recomendacion</h1>
+                <h1>Recomendación</h1>
                 <div class="chat">
                     <div id="chat-messages"></div>
                 </div>
@@ -117,7 +97,7 @@
         var denominador = 1 - Math.pow(1 + interesmensual, -totalplazo);
         var MontoAPagar = numerador / denominador;
         /*Fin del ejercicio*/
-        var comment = "Imagina que eres un analista financiero experto y quieren un préstamo bancario de " + monto+ " bolivianos(BS) a " + meses+ " meses y un interés de " + interes+ "%. El monto a pagar de forma mensual es de "+MontoAPagar+" y tiene con un ingreso de "+ingreso+". calcula su capacidad de endeudamiento y Solo dime la recomendación bien completa y breve(que piensas del plazo,interes y demas). Y si es razonable o no el prestamo bancario.";
+        var comment = "Imagina que eres un analista financiero experto y quieren un préstamo bancario de " + monto+ " bolivianos(BS) a " + meses+ " meses y un interés de " + interes+ "%. El monto a pagar de forma mensual es de "+MontoAPagar+" y tiene con un ingreso de "+ingreso+". Calcula su capacidad de endeudamiento que lo recomendable tiene que ser menor del 50% y Solo dime la recomendación bien completa y breve(que piensas del plazo,interes y demas). Y si es razonable o no el prestamo bancario.";
         $('#chat-messages').empty();
         $.ajax({
             type: 'POST',
