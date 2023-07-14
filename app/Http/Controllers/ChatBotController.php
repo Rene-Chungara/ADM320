@@ -10,10 +10,10 @@ class ChatBotController extends Controller
     public function sendchat(Request $request){
         $input = $request->input('input');
         $result = OpenAI::completions()->create([
-            'max_tokens' => 100,
+            'max_tokens' => 1000,
             'model' => 'text-davinci-003',
             'prompt'=>$input,
-            "temperature" => 0.4,
+            "temperature" => 0.5,
         ]);
 
         $response = array_reduce(
@@ -23,5 +23,4 @@ class ChatBotController extends Controller
         
         return $response;
     }
-
 }

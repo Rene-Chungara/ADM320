@@ -1,110 +1,84 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
-            integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" 
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <meta name="csrf-token" content="{{ csrf_token()}}">
-
-    </head>
-    <!--Estilos extras -->
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        ::-webkit-scrollbar{
-            width: 5px;
-        }
-        ::-webkit-scrollbar-track{
-            background: #13254c;
-        }
-        ::-webkit-scrollbar-thumb{
-            background: #061128;
-        }
-    </style>
-    <body>
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                    <div>
-                        <!--Contenedor del chatbot --> 
-                        <div class="container-fluid m-0 d-flex">
-    
-                            <div class="pl-2" style="width: 40px; height: 50-px;font-size:180%">
-                                <i class="fa fa-angle-double-left text mt-2"></i>
-                            </div>
-    
-                            <div style="width: 50px;height:50px;">
-                                <img src="https://thumbs.dreamstime.com/b/robot-icon-chat-bot-sign-support-service-concept-chatbot-character-flat-style-robot-icon-chat-bot-sign-support-service-120298004.jpg" width="100%" height="100%" style="border-radius: 50px">
-                            </div>
-    
-                            <div class="text-black font-weight-bold ml-2 mt-2">
-                                <h2>ChatBot</h2>
-                            </div>
-                        </div>
-    
-                        <div style="background: #061128; height: 2px"></div>
-    
-                        <div id="content-box" class="container-fluid p-2" style="height: calc(100vh - 130px); overflow-y: scroll;">
-                            
-    
-                        </div>
-    
-                        <div class="container-fluid w-100 px-3 py-2 d-flex" style="background: #131f45; height: 62px">
-                            <div class="mr-2 pl-2" style="background: #ffffff1c; width: calc(100% - 45px); border-radius:5px">
-                                <input id="input" class="text-white" type="text" name="input" style="background:none; width:100%; height:100%; border:0; outline:none;">
-                            </div>
-                            
-                            <div id="button-submit"  class="text-center" style="background:  #4acfee; height:100%; width:20%; border-radius:5px;">
-                                <i class="fa fa-paper-plane text-white" aria-hidden="true" style="line-height: 45px;"></i>
-                            </div>
-                        </div>
-    
-                    </div>
-                </div>
-            </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Crediticio</title>
+    <link rel="icon" type="image/png" href="{{asset('images/logo.png')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{{asset('assets/style.css')}}">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Analisis Crediticio <span class="material-symbols-outlined">multiline_chart</span> </h1>
         </div>
-    </body>    
+            <nav class="main-menu">
+            <ul>    
+                <li><a href="{{ route('inicio') }}">Inicio</a></li>
+                <li><a href="{{ route('calculadora') }}">Calcula tu credito</a></li>
+                <li><a href="#">Desarrolladores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-section">
+        <h2 class="section-title">La importancia del análisis crediticio para tomar decisiones financieras informadas</h2>
+        <p class="section-content">
+            El análisis crediticio es el proceso de evaluar la información financiera de una persona, 
+            empresa u otra entidad para tomar decisiones informadas sobre la concesión de crédito. Ayuda a determinar 
+            la capacidad de pago y el riesgo de incumplimiento de los prestatarios, permitiendo a las organizaciones tomar 
+            decisiones financieras seguras y rentables. El análisis crediticio minimiza los riesgos, establece condiciones 
+            de crédito adecuadas y optimiza la gestión de la cartera de crédito. Es fundamental para tomar decisiones 
+            financieras sólidas y establecer relaciones financieras saludables.
+        </p>
+    </section>
+
+    <div class="section-wrapper">
+        <section class="section">
+            <h2 class="section-title">Analisis de Datos Financieros</h2>
+            <p class="section-content">
+                El análisis de los estados financieros es el proceso de examinar y evaluar la información financiera 
+                de una empresa para comprender su situación y desempeño. Ayuda a tomar decisiones informadas y evaluar 
+                la salud financiera de la empresa.
+            </p>
+        </section>
+    
+        <section class="section">
+            <h2 class="section-title">Los Ratios Financieros</h2>
+            <p class="section-content">
+                Son herramientas para medir y evaluar la salud financiera de una empresa. 
+                Estas medidas ayudan a entender su rendimiento, rentabilidad y solvencia, entre otros aspectos. Son útiles 
+                para tomar decisiones informadas y comparar el desempeño financiero de la empresa.
+            </p>
+        </section>
+    
+        <section class="section">
+            <h2 class="section-title">Beneficios de la IA</h2>
+            <p class="section-content">La inteligencia artificial en el análisis crediticio evalua la capacidad 
+                de pago y el riesgo crediticio de las personas. Ayuda a tomar decisiones más rápidas y precisas 
+                al analizar grandes cantidades de datos financieros y no financieros. Identifica patrones ocultos en 
+                los datos y ayuda a reducir el riesgo de incumplimiento al otorgar crédito.
+            </p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>© 2023. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-links');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+</body>
 </html>
 
-<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-<script>
-    $.ajaxSetup({
-        headers:{
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    })
-    $('#button-submit').on('click', function(){
-        $value = $('#input').val();
-        $('#content-box').append(`<div class="mb-2">
-                                    <div class="float-right px-3 py-2" style="width: 270px; background: #4acfee; border-radius: 10px; float: right; font-size: 85%;">
-                                        `+$value+`
-                                    </div>
-                                    <div style="clear:both;"></div>
-                                </div>`);
 
-        $.ajax({
-            type: 'POST',
-            url:'{{url('send')}}',
-            data: {
-                'input': $value
-            },
-            success: function(data){
-                $('#content-box').append(`<div class="d-flex mb-2">
-                                            <div class="mr-2" style="width: 45px; height:45px">
-                                                <img src="https://thumbs.dreamstime.com/b/robot-icon-chat-bot-sign-support-service-concept-chatbot-character-flat-style-robot-icon-chat-bot-sign-support-service-120298004.jpg" width="100%" height="100%" style="border-radius: 50px">
-                                            </div>
-                                            <div class="text-white px-3 py-2" style="width:270px; background: #13254c; border-radius:10px; font-size:85%">
-                                                `+data+`
-                                            </div>
-                                        </div>`)
-                                        $value = $('#input').val('');
-            }
-        })
-        
-    })
-</script>  
+
+
 
