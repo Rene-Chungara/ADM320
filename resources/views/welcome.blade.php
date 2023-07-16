@@ -17,7 +17,7 @@
         <nav class="main-menu">
             <ul>
                 <li><a href="{{ route('inicio') }}">Inicio</a></li>
-                <li><a href="{{ route('calculadora') }}">Calcula tu credito</a></li>
+                <li><a href="{{ route('calculadora') }}">Calcula tu crédito</a></li>
                 <li><a href="#">Desarrolladores</a></li>
             </ul>
         </nav>
@@ -37,7 +37,7 @@
 
     <div class="section-wrapper">
         <section class="section">
-            <img src="{{asset('images/Análisis_financiero.jpg')}}" alt="Análisis Financiero" width="90%">
+            <img src="{{asset('images/Diseño sin título.png')}}" alt="Análisis Financiero" width="270px">
             <h2 class="section-title">Análisis de Datos Financieros</h2>
             <p class="section-content">
                 El análisis de los estados financieros es el proceso de examinar y evaluar la información financiera 
@@ -56,7 +56,7 @@
         </section>
     
         <section class="section">
-            <img src="{{asset('images/IAenlasfinanzas.jpg')}}" alt="Análisis Financiero y la inteligencia artificial" width="100%">
+            <img src="{{asset('images/IAenlasfinanzas.jpg')}}" alt="Análisis Financiero y la inteligencia artificial" width="300px">
             <h2 class="section-title">Beneficios de la IA</h2>
             <p class="section-content">La inteligencia artificial en el análisis crediticio evalua la capacidad 
                 de pago y el riesgo crediticio de las personas. Ayuda a tomar decisiones más rápidas y precisas 

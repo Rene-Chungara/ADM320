@@ -13,7 +13,7 @@ class ChatBotController extends Controller
             'max_tokens' => 1000,
             'model' => 'text-davinci-003',
             'prompt'=>$input,
-            "temperature" => 0.5,
+            'temperature' => 0.8,
         ]);
 
         $response = array_reduce(

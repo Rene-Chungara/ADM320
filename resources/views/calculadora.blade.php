@@ -9,7 +9,6 @@
         <meta name="csrf-token" content="{{ csrf_token()}}">
 
     </head>
-    </style>
     <body>
         <header class="header">
             <div class="logo">
@@ -18,7 +17,7 @@
                 <nav class="main-menu">
                 <ul>    
                     <li><a href="{{ route('inicio') }}">Inicio</a></li>
-                    <li><a href="{{ route('calculadora') }}">Calcula tu credito</a></li>
+                    <li><a href="{{ route('calculadora') }}">Calcula tu crédito</a></li>
                     <li><a href="#">Desarrolladores</a></li>
                 </ul>
             </nav>
