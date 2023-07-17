@@ -570,10 +570,9 @@ button:hover {
 }
 .footer .box-container .box .share a {
   height: 4rem;
-  width: 4rem;
   padding: 1rem;
   text-align: center;
-  border-radius: 5rem;
+  border-radius: 2rem;
   font-size: 1.7rem;
   margin-right: 1rem;
   transition: 0.2s;

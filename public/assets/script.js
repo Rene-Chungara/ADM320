@@ -10,7 +10,7 @@ function calculatePayment() {
     var numerador = monto * interesmensual;
     var denominador = 1 - Math.pow(1 + interesmensual, -totalplazo);
     var MontoAPagar = numerador / denominador;
-    var Endeudamiento = ingreso*0.4;
+    var Endeudamiento = ingreso*0.5;
     var resultElement = document.getElementById('result');
     resultElement.innerHTML = '';
     if (isNaN(MontoAPagar)) {

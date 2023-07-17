@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
     <meta name="csrf-token" content="{{ csrf_token()}}">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{asset('assets/style1.css')}}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Favicon -->
     <link id='favicon' rel="shortcut icon" href="{{asset('images/logo.png')}}" type="image/x-png">
     <title>Analisis Crediticio</title>
@@ -18,7 +19,7 @@
     <body>
         <!-- navbar starts -->
         <header>
-                <a href="/" class="logo"> Finanzas</a>
+                <a href="/" class="logo"><i class="fa-solid fa-chart-simple"></i> Finanzas</a>
 
                 <div id="menu" class="fas fa-bars"></div>
                 <nav class="navbar">
@@ -202,6 +203,15 @@
                     <a href="#home"><i class="fas fa-chevron-circle-right"></i> Inicio</a>
                     <a href="#about"><i class="fas fa-chevron-circle-right"></i> Información</a>
                     <a href="#skills"><i class="fas fa-chevron-circle-right"></i> Calculadora</a>
+                </div>
+
+                <div class="box">
+                    <h3>Lenguajes de Programación</h3>
+                    <div class="share">
+                        <a href="https://laravel.com/" aria-label="Laravel" target="_blank" ><i class="fa-brands fa-laravel fa-lg"></i></a>
+                        <a href="https://lenguajehtml.com/html/" aria-label="HTML5" target="_blank"><i class="fa-brands fa-html5 fa-lg"></i></a>
+                        <a href="https://www.php.net/docs.php" aria-label="PHP" target="_blank" id="php"><i class="fa-brands fa-php fa-xl"></i></a>
+                    </div>
                 </div>
             </div>
         </section>
