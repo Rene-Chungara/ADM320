@@ -16,7 +16,7 @@ function calculatePayment() {
     if (isNaN(MontoAPagar)) {
         resultElement.innerHTML = 'Por favor, complete todos los campos.';
     } else {
-        resultElement.innerHTML = 'El monto a pagar mensualmente es: ' + MontoAPagar.toFixed(2) + ' BS, además tu monto maximo a endeudarte es ' + Endeudamiento.toFixed(2) + ' BS';
+        resultElement.innerHTML = '';
     }
 }
 

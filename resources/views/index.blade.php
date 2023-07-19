@@ -178,8 +178,6 @@
                         <input type="number" id="income" required>
                     </div>
                     <button id="calculateBtn">Calcular</button>
-                    <div id="result" class="result"></div>        
-                    <script src="{{asset('assets/script.js')}}"></script><!--Script-->
                 </div>
                 <div class="chat-container">
                     <h3>Recomendación</h3>
@@ -195,7 +193,7 @@
         <section class="footer">
             <div class="box-container">
                 <div class="box">
-                    <h3>Grupo 52</h3>
+                    <h3>Finanzas</h3>
                     <p>Gracias por visitar el sitio web, si tienes alguna no dudes en preguntarnos. <br/></p>
                 </div>
                 <div class="box">
@@ -265,7 +263,7 @@
                 var MontoAPagar = numerador / denominador;
                 var endeudamiento = ingreso * 0.5;
                 /*Fin del ejercicio*/
-                var comment = "Quiero un préstamo total de " + monto+ " bolivianos a " + meses+ " meses y un interés de " + interes+ "% anual. El monto a pagar de forma mensual es de "+MontoAPagar.toFixed(2)+" y cuento con un ingreso de "+ingreso+".Mi nivel de endeudamiento es "+endeudamiento.toFixed(2)+" lo cual tiene que ser menor que "+MontoAPagar+" y Solo dime una buena recomendación bien completa y breve(que piensas del plazo,interes y demas).";
+                var comment = "Quiero un préstamo total de " + monto+ " bolivianos a " + meses+ " meses y un interés de " + interes+ "% anual. El monto a pagar de forma mensual es de "+MontoAPagar.toFixed(2)+" y cuento con un ingreso de "+ingreso+".Mi nivel de endeudamiento es "+endeudamiento.toFixed(2)+" lo cual tiene que ser menor que "+MontoAPagar+" y Solo dime varias recomendaciones con sus puntos bien completo y breve(que piensas del plazo,interes y demas). Pon con formato 1. , 2. ... cada que menciones un punto";
                 $('#chat-messages').empty();
                 $.ajax({
                     type: 'POST',
@@ -274,9 +272,20 @@
                         'input': comment
                     },
                     success: function(data){
-                        $('#chat-messages').append(`<div class="chatbot-message">
-                                                        `+data+`
-                                                    </div>`)
+                        if (data.trim() !== '') {
+                            var chatMessages = document.getElementById('chat-messages');
+                            var messageContent = `
+                                <div class="chatbot-message">
+                                    Limite a endeudarse es: ${endeudamiento.toFixed(2)} Bs.<br>
+                                    Monto a pagar de forma mensual: ${MontoAPagar.toFixed(2)}Bs.<br>
+                                    <ul>
+                                        <li>${data.replace(/\n/g, "</li><li>")}</li>
+                                    </ul>
+                                </div>
+                            `;
+
+                            chatMessages.innerHTML += messageContent;
+                        }
                     }
                 })
         
